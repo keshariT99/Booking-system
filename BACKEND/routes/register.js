@@ -27,7 +27,8 @@ router.route("/regCustomer").post((req,res)=>{ //post - http request method
     const mobileNo = req.body.mobileNo;
     const email = req.body.email;            //send request in frontend to backend to save data in databas (as a request's body )
     const password = req.body.password;
-    const image 
+    const image = req.file.filename;
+   
     
     //const images = req.body.images;
     
@@ -39,6 +40,7 @@ router.route("/regCustomer").post((req,res)=>{ //post - http request method
         mobileNo,
         email,
         password,
+        image,
         
         
     })

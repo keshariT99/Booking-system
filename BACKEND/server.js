@@ -14,10 +14,6 @@ const UserRouter = require("./routes/register") //get access model file
 
 
 
-
-
-
-
 app.use(cors());
 app.use(bodyParser.json()); //use jason format (key-value pairs)
 
@@ -37,8 +33,6 @@ const connection = mongoose.connection;
 connection.once("open", ()=>{
     console.log("Mongodb Connection success!");
 });
-
-
 
 
 
