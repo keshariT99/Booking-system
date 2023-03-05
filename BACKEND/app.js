@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const path = require('path');
+
 const app = express();
 
 require("dotenv").config();
@@ -16,6 +18,7 @@ const UserRouter = require("./routes/users") //get access model file
 app.use(cors());
 app.use(bodyParser.json()); //use jason format (key-value pairs)
 
+app.use('/uploads', express.static('uploads'));
 
 app.use("/user",UserRouter); //load js file
 
